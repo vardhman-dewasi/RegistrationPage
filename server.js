@@ -44,7 +44,7 @@ app.post('/submit', async (req, res) => {
         // if (!name || !email || !roll_number || !college_name || !branch || !address || !graduation_year) {
         //     return res.status(400).json({ success: false, message: "All fields are required!" });
         // }
-        res.status(400).json({success: false, message: "server error"});
+        // res.status(400).json({success: false, message: "server error"});
         // Save user to database
         const user = new User({ name, email, roll_number, college_name, branch, address, graduation_year });
         await user.save();
