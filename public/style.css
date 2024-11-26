@@ -1,0 +1,91 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form labels and inputs */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Buttons styling */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Status message styling */
+#statusMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#statusMessage.error {
+    color: red;
+}
+
+/* Registrations display styling */
+#registrations {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#registrations p {
+    font-size: 14px;
+    margin: 5px 0;
+}
