@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require("dotenv");
 
 // Initialize app
 const app = express();
@@ -12,10 +13,9 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // MongoDB connection
-mongoose.connect("mongodb://127.0.0.1:27017/registration", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => {
+const URI = process.env.DATABASE_URL;
+mongoose.connect(URI)
+.then(() => {
     console.log('Connected to MongoDB');
 }).catch(err => {
     console.error('MongoDB connection error:', err);
@@ -67,7 +67,7 @@ app.get('/registrations', async (req, res) => {
 
 
 // Start server
-const PORT = 4000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+const Port = process.env.PORT;
+app.listen(Port, () => {
+    console.log(`Server is running on ${Port}`);
 });
